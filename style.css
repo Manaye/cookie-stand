@@ -2,5 +2,16 @@ body{
     background-color: lightblue;
     background-image: url(salmon.png);
     background-repeat: no-repeat;
-    background-position: center top;
+    background-position: left bottom -240%;
+}
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+table tr td {
+    border: 1px solid black;
+    padding: 10px;
+    font-size: 1.2em;
+    font-weight: normal;
 }
