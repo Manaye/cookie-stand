@@ -9,7 +9,19 @@
 <body>
  
   <h1>Cookies Needed By Location Each Day</h1>
-  
+  <form onsubmit="handleSubmit()">
+      <fieldset style="width: 75%">
+        <legend>Enter your information:</legend>
+        storeName: <input type="text"><br>
+        mincustomer: <input type="text"><br>
+        maxcustomer: <input type="text"><br>
+        averageSale: <input type="text"><br>
+
+        <input type="submit">
+      
+      </fieldset>
+    </form>
+  <br>
  <table id ="table"> </table>
  
  <script src="app.js"></script>
