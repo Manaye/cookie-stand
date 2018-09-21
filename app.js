@@ -2,6 +2,12 @@
 //make Array with open times
 var storeHours = ['', '6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', '8pm','total'];
 var table = document.getElementById('table');
+var th = document.getElementsByTagName('thead')[0];
+//var tbody = document.getElementsByTagName('tbody')[0];
+//var tfoot = document.getElementsByTagName('tfoot')[0];
+var addForm = document.getElementById('add-location');
+//var salesForm = document.getElementById('sales-data');
+
 function createTableHeader(){
   var tr = document.createElement('tr');
   for (var i = 0; i < storeHours.length; i++) {
@@ -22,8 +28,8 @@ function Store(storeName, minCustomers, maxCustomers, avgSale){
   this.cookiesArray = [];
   this.totalCookies = 0;
   this.getAvgCustomersHour = function (){
-    this.avgCustomersHour = Math.ceil(Math.random() * (this.maxCustomers - this.minCustomers + 1) + this.minCustomers);
-  };
+    this.avgCustomersHour = Math.floor(Math.random() * (this.maxCustomers - this.minCustomers + 1) + this.minCustomers);
+  }; 
   this.getAvgCookiesHour =  function(){
     this.avgCookiesHour = Math.ceil(this.avgCustomersHour * this.avgSale);
   };
@@ -42,7 +48,24 @@ function Store(storeName, minCustomers, maxCustomers, avgSale){
   };
   allStores.push(this);
 }
-//
+function addElement(element, content, parent) {
+  var newElement = document.createElement(element);
+  var newContent = document.createTextNode(content);
+  newElement.appendChild(newContent);
+  parent.appendChild(newElement);
+  return newElement;
+
+/*function renderHeader() {
+  thead.innerHTML = '';
+  var tr = addElement('tr', '', thead);
+  addElement('th', '', tr);
+  for (var i = 0; i < hours.length; i++) {
+    addElement('th', hours[i], tr);
+  }
+  addElement('th', 'Total', tr);*/
+}
+
+
 createTableHeader();
 var form = document.querySelector('form');
 form.onsubmit = function submitHandler(e){
@@ -90,6 +113,7 @@ for(var i = 0; i<allStores.length; i++){
   }
   table.appendChild(tr);
 }
+
 
 
 function createRow(storeName){
