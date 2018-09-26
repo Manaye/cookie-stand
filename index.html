@@ -2,37 +2,43 @@
 <html>
 
 <head>
-	<title>Basic Website</title>
+  <title>cookie-stand</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-
   <header>
-    Pats Salmon Cookies
-  </header>
-
-  
-	<main>
+    <h1>Cookies</h1>
     
-    <div>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, amet dolore soluta id repellat ipsam natus eum facere at. Voluptates dolor ratione ex, sed explicabo accusamus sunt eligendi itaque voluptas!
-      Vitae nihil molestiae numquam totam. Exercitationem iste dolorem non a excepturi et blanditiis repudiandae aut impedit voluptatibus! Repellat sapiente, asperiores voluptatibus beatae odit illo nobis dolor labore vitae, laboriosam maxime.
-      Obcaecati inventore sed placeat nobis voluptatum dolorem assumenda omnis, harum eligendi voluptate eos eveniet eius magnam odio adipisci deserunt perferendis dignissimos praesentium natus nemo. Animi reprehenderit iusto molestias sapiente doloribus?
-      Ducimus neque mollitia reiciendis suscipit vel. Id modi nobis dolore maiores obcaecati delectus sit velit excepturi iusto ullam natus repellat ut cupiditate fugiat, quos provident, officiis minima reiciendis, quidem animi.
-      Cumque sit hic quas perspiciatis incidunt asperiores soluta nulla obcaecati explicabo magnam voluptatibus voluptate repellendus, modi architecto cum dignissimos ducimus velit nesciunt et ut beatae in. Sapiente labore voluptatum quod?</p>
-      <img src="assets/chinook.jpg" alt="">
+  </header>
+   <div>
+      <h1>Cookies Needed By Location Each Day</h1>
+      <form>
+          <fieldset style="width: 75%">
+            <legend>Enter your information:</legend>
+            storeName: <input type="text" id="store-name" name="storeName"><br>
+            minCustomer: <input type="text" id="min-customer" name="minCustomer"><br>
+            maxCustomer: <input type="text" id="max-customer" name="maxCustomer"><br>
+            averageSale: <input type="text" id="average-sale" name="averageSale"><br>
+    
+            <input type="submit" value="submit">
+          
+          </fieldset>
+        </form>
+      <br>
+     <table id ="table"> </table>
+     
+   </div>
+    
+   <div class="family-img">
+      <img src="https://raw.githubusercontent.com/codefellows/seattle-201d39/master/class-09-css_wireframe_part_1/lab/assets/family.jpg" width="300px" height="200px" alt="">
+     
     </div>
-    <div><img src="assets/fish.jpg" alt=""></div>
-    <div><img src="assets/frosted-cookie.jpg" alt=""></div>
-    <div><img src="assets/salmon.png" alt=""></div>
-    <div><img src="assets/shirt.jpg" alt=""></div>
-	</main>
-  
-  <footer>  
-    &copy my-cookies.com
-  </footer>
+    <a href="sales.html" target="_blank">go to gallery</a>
+    
+  <footer><p>&copy my cookies.com</p></footer>
+ <script src="app.js"></script>
 
-</body>
+</body>  
 
 </html>
